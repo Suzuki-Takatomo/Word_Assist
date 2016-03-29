@@ -1,0 +1,2 @@
+# Word_Assist
+Microsoft Wordで選択している単語の意味を調べる翻訳支援ソフト
