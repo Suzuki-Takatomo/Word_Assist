@@ -58,6 +58,9 @@ End Sub
 Private Sub this_sentence_Click()
     Call Marker.Sentence
 End Sub
+
+
+
 Private Sub UserForm_Initialize()                           'Šù’è’l‚Ìİ’è
     Searchengine = "http://ejje.weblio.jp/content/"
     Searchtag = "meaning"
@@ -71,6 +74,13 @@ Private Sub UserForm_Terminate()
             Call excludex
         End If
     End If
+    Index = 0
+    changed = False
+    saved = False
+    Dim i As Integer
+    For i = 0 To wordnumber
+        mean(i) = ""
+    Next i
 End Sub
 Private Sub WordList_AfterUpdate()
     WordAssist.meaningLabel.Caption = mean(Me.WordList.ListIndex)
